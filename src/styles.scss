@@ -1,0 +1,16 @@
+/**
+ * +++ +++ IMPORTS ALL SCSS FILES +++ +++
+ */
+// +++ extends +++
+@import './scss/extends/_extends';
+ 
+// +++ CSS reset +++
+ @import './scss/vendors/_reset';
+
+ // +++ variables +++
+ @import './scss/variables/_variables';
+ 
+ // +++ general styles +++
+@import './scss/partials/_general';
+// +++ app content styles +++
+@import './scss/partials/_content';
