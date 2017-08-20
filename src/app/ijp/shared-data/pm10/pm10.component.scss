@@ -1,0 +1,17 @@
+.station__data-pm10 {
+    min-height: 100px;
+    padding: .250rem;
+    text-align: center;
+    background-color: #008000;
+        h3 {
+            text-transform: uppercase;
+        }
+}
+.data__pm25 {
+    margin: .250rem 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.units {
+    font-size: .900rem;
+}
