@@ -2,13 +2,13 @@
   <h2 class="station__container-header">{{ stationName }}</h2>
   <div class="station__container-data flex flex__row flex__justify-spacearound">
     <div class="station__data">
-      <data-ijp [ijpVal]=ijpData [ijpStringVal]=ijpString></data-ijp>
+      <data-ijp *ngIf="ijpData" [ijpVal]=ijpData [ijpStringVal]=ijpString></data-ijp>
     </div>
     <div class="station__data">
-      <data-pm25 [pm25Val]="pm25Data"></data-pm25>
+      <data-pm25 *ngIf="pm25Data" [pm25Val]="pm25Data"></data-pm25>
     </div>
     <div class="station__data">
-      <data-pm10 [pm10Val]="pm10Data"></data-pm10>
+      <data-pm10 *ngIf="pm10Data" [pm10Val]="pm10Data"></data-pm10>
     </div>
   </div>
 </div>

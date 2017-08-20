@@ -16,7 +16,8 @@ export class ChabryComponent implements OnInit {
   pm10Data: string;
 
   constructor(private connectionServ: IjpConnectionService) { }
-
+redClass;
+  // insert data to DOM;
   insertData() {
     this.ijpData = this.data.IJP;
     this.ijpString = this.data.IJPString;
@@ -24,17 +25,20 @@ export class ChabryComponent implements OnInit {
     this.pm10Data = this.data.PM10;
   }
 
+  // get data from APi
   getData() {
     this.connectionServ.getDataFromChabryPoint()
-      .subscribe((response) => {
-        this.data = response.json();
-        this.insertData();
-        console.log(this.data);
+      .subscribe(
+        (response) => {
+          this.data = response.json();
+          this.insertData();
+      },
+      (error: Response) => {
+        console.error(error);
       });
   }
 
   ngOnInit() {
     this.getData();
   }
-
 }
