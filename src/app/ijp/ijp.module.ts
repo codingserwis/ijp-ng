@@ -7,6 +7,7 @@ import { PileckiegoComponent } from './pileckiego/pileckiego.component';
 import { SolidarnosciComponent } from './solidarnosci/solidarnosci.component';
 import { PasiekaComponent } from './pasieka/pasieka.component';
 import { NwkComponent } from './nwk/nwk.component';
+import { GrudziceComponent } from './grudzice/grudzice.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { NwkComponent } from './nwk/nwk.component';
     PileckiegoComponent,
     SolidarnosciComponent,
     PasiekaComponent,
-    NwkComponent
+    NwkComponent,
+    GrudziceComponent
   ],
   exports: [
     ChabryComponent,
@@ -27,7 +29,8 @@ import { NwkComponent } from './nwk/nwk.component';
     PileckiegoComponent,
     SolidarnosciComponent,
     PasiekaComponent,
-    NwkComponent
+    NwkComponent,
+    GrudziceComponent
   ]
 })
 export class IjpModule { }
