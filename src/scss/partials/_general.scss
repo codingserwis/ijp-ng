@@ -23,8 +23,25 @@ body {
 .flex__justify-center {
     justify-content: center;
 }
+.flex__justcent-mob {
+    @include for-phones-landscape {
+        justify-content: center !important;
+    }
+    @include from-tablet-portrait {
+        justify-content: center !important;
+    }
+}
 .flex__justify-spacearound {
     justify-content: space-around;
+}
+.flex__justify-between {
+    justify-content: space-between;
+}
+.flex__align-center {
+    align-items: center;
+}
+.margin__btn-half {
+    margin-bottom: .500rem;
 }
 .btn {
     margin: .500rem 0;

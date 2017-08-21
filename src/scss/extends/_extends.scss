@@ -5,6 +5,7 @@
  @import '../mixins/_rwd';
  
  %station-container {
+     display: block;
     width: 100%;
     margin-top: .500rem;
     padding: .250rem;
