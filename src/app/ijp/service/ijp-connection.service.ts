@@ -11,7 +11,7 @@ export class IjpConnectionService {
       pulaskiego: '5ccf7fc255ee', // done
       pileckiego: '6001940094f8', // done
       pasieka: '5ccf7fc17d7d', // done
-      nowaWiesKrol: '5ccf7fc18052',
+      nowaWiesKrol: '5ccf7fc18052', // done
       grudzice: '60019400a82b',
       osAlSolid: 'a020a6036801' // done
     }
@@ -42,4 +42,8 @@ export class IjpConnectionService {
   getDataFromNwkPoint() {
     return this.http.get(`http://api.looko2.com/?method=GetLOOKO&id=${this.apiConfig.location.nowaWiesKrol}&token=${this.apiConfig.key}`); 
   }
+
+  getDataFromGrudzicePoint() {
+    return this.http.get(`http://api.looko2.com/?method=GetLOOKO&id=${this.apiConfig.location.grudzice}&token=${this.apiConfig.key}`); 
+  }  
 }
