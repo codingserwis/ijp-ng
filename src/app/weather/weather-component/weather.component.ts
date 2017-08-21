@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class WeatherComponent implements OnInit {
   data: any;
   dataLoaded = false;
-  weatherData = new WeatherDataModel(null, null, null, null, null, null);
+  weatherData = new WeatherDataModel(null, null, null, null, null, null, null, null, null, null);
   constructor(private connectionServ: WeatherConnectionService) { }
 
   // insert data to DOM
@@ -22,6 +22,11 @@ export class WeatherComponent implements OnInit {
     this.weatherData.feelsTemp = this.data.current.feelslike_c;
     this.weatherData.windString = this.data.current.wind_dir;
     this.weatherData.windSpeed = this.data.current.wind_kph;
+    this.weatherData.precip = this.data.current.precip_mm;
+    this.weatherData.humidity = this.data.current.humidity;
+    this.weatherData.pressure = this.data.current.pressure_mb;
+    this.weatherData.cloud = this.data.current.cloud;
+    
   }
 
   // check wind direction
@@ -77,15 +82,15 @@ export class WeatherComponent implements OnInit {
       }
     } else {
       if (this.data.current.condition.code === 1000) {
-          return `wi-night-alt-clear`;
+          return 'wi-night-clear';
       } else if(this.data.current.condition.code === 1003) {
           return `wi-night-alt-cloudy`;
       } else if (this.data.current.condition.code === 1030) { 
         return `wi-night-alt-cloudy-windy`;
       } else if (this.data.current.condition.code === 1135) {
           return `wi-night-fog`;
-      } else if (this.data.current.code === 1183) {
-          return `wi-night-alt-showers`;
+      } else if (this.data.current.condition.code === 1183) {
+          return 'wi-night-alt-showers';
       }
     }
   }
@@ -106,7 +111,7 @@ export class WeatherComponent implements OnInit {
 
   // refreshing data
   onRefresh() {
-    this.weatherData = new WeatherDataModel(null, null, null, null, null, null);
+    this.weatherData = new WeatherDataModel(null, null, null, null, null, null, null, null, null, null);
     this.getData();
   }
   ngOnInit() {

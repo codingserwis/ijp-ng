@@ -2,13 +2,24 @@
 
 :host {
     @extend %station-container;
+    width: 100%;
     padding-left: .500rem;
     padding-right: .500rem;
     color: $text-orange;
     text-align: center;
 }
+.current__container {
+    padding-top: .500rem;
+    margin-bottom: .250rem;
+}
+.container__border-top {
+    border-top: 1px solid rgba($text-orange, 0.3);
+}
+.container__border-bottom {
+    border-bottom: 1px solid rgba($text-orange, 0.3);
+}
 .weather__lastupdate {
-    margin: 1rem 0;
+    margin: .500rem 0;
 }
 .weather__lastupdate-header {
     text-transform: uppercase;
@@ -20,12 +31,28 @@
 }
 .weather__current-condition {
     font-size: 4rem;
+        @include for-phones-landscape {
+            width: 30%;
+        }
+        @include from-tablet-portrait {
+            width: 20%;
+        }
 }
 .weather__current-temp {
     font-size: 3.5rem;
+        @include for-phones-landscape {
+            width: 30%;
+        }
+        @include from-tablet-portrait {
+            width: 20%;
+        }
         span {
             font-weight: 400;
         }
+}
+.feelstemp__container {
+    margin-top: .500rem;
+    padding-bottom: .500rem;
 }
 .feels__temp-header, .wind__dir-header {
     font-size: 1.225rem;
@@ -37,9 +64,18 @@
             font-weight: 400;
         }
 }
+.wind__container {
+    padding: .500rem 0;
+}
 .wind_dir-icon {
     font-size: 4rem;
     line-height: 4rem;
+        @include for-phones-landscape {
+            width: 30%;
+        }
+        @include from-tablet-portrait {
+            width: 20%;
+        }
         p {
             font-size: 2rem;
             font-weight: 400;
@@ -48,6 +84,12 @@
 }
 .wind__dir-units {
     font-size: 2.5rem;
+        @include for-phones-landscape {
+            width: 30%;
+        }
+        @include from-tablet-portrait {
+            width: 20%;
+        }
         span {
             font-weight: 400;
         }
@@ -55,4 +97,33 @@
 .wind__units {
     font-size: 1rem;
     font-weight: 300;
+}
+.moredata__container {
+    padding-top: .500rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: .500rem;
+        @include from-tablet-portrait {
+            padding-left: 13.5rem;
+            padding-right: 13.5rem;
+        }
+        @include from-sm-desktop {
+            padding-left: 20.5rem;
+            padding-right: 20.5rem;
+        }
+}
+.moredata__container-top {
+    margin-bottom: .500rem;
+}
+.moredata__data-container {
+    @include for-phones-landscape {
+        width: 50%;
+    }
+    h3 {
+        text-transform: uppercase;
+    }
+}
+.moredata__data {
+    font-size: 1.225rem;
+    font-weight: 400;
 }
