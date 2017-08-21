@@ -1,0 +1,58 @@
+@import '../../../scss/extends/_extends';
+
+:host {
+    @extend %station-container;
+    padding-left: .500rem;
+    padding-right: .500rem;
+    color: $text-orange;
+    text-align: center;
+}
+.weather__lastupdate {
+    margin: 1rem 0;
+}
+.weather__lastupdate-header {
+    text-transform: uppercase;
+    margin-bottom: .250rem;
+}
+.weather__lastupdate-content {
+    font-size: .900rem;
+    font-weight: 400;
+}
+.weather__current-condition {
+    font-size: 4rem;
+}
+.weather__current-temp {
+    font-size: 3.5rem;
+        span {
+            font-weight: 400;
+        }
+}
+.feels__temp-header, .wind__dir-header {
+    font-size: 1.225rem;
+    text-transform: uppercase
+}
+.feels__temp-data {
+    font-size: 2.5rem;
+        span {
+            font-weight: 400;
+        }
+}
+.wind_dir-icon {
+    font-size: 4rem;
+    line-height: 4rem;
+        p {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+}
+.wind__dir-units {
+    font-size: 2.5rem;
+        span {
+            font-weight: 400;
+        }
+}
+.wind__units {
+    font-size: 1rem;
+    font-weight: 300;
+}
