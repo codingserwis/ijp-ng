@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChabryComponent } from './chabry/chabry.component';
 import { PulaskiegoComponent } from './pulaskiego/pulaskiego.component';
+import { PileckiegoComponent } from './pileckiego/pileckiego.component';
 
 @NgModule({
   imports: [
@@ -11,11 +12,13 @@ import { PulaskiegoComponent } from './pulaskiego/pulaskiego.component';
   ],
   declarations: [
     ChabryComponent,
-    PulaskiegoComponent
+    PulaskiegoComponent,
+    PileckiegoComponent
   ],
   exports: [
     ChabryComponent,
-    PulaskiegoComponent
+    PulaskiegoComponent,
+    PileckiegoComponent
   ]
 })
 export class IjpModule { }

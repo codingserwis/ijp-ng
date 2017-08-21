@@ -2,23 +2,24 @@ import { IjpConnectionService } from './../service/ijp-connection.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pulaskiego-data',
-  templateUrl: './pulaskiego.component.html',
-  styleUrls: ['./pulaskiego.component.scss'],
+  selector: 'pileckiego-data',
+  templateUrl: './pileckiego.component.html',
+  styleUrls: ['./pileckiego.component.scss'],
   providers: [ IjpConnectionService ]
 })
-export class PulaskiegoComponent implements OnInit {
+export class PileckiegoComponent implements OnInit {
+ 
   data: any;
-  stationName = 'LO nr II - ul. Pułaskiego';
+  stationName = 'Rondo Pileckiego';
   ijpData: string;
   ijpString: string;
   pm25Data: string;
   pm10Data: string;
- 
+
   constructor(private connectionServ: IjpConnectionService) { }
 
-  // insert data to DOM;
-  insertData() {
+   // insert data to DOM;
+   insertData() {
     this.ijpData = this.data.IJP;
     this.ijpString = this.data.IJPString;
     this.pm25Data = this.data.PM25;
@@ -27,7 +28,7 @@ export class PulaskiegoComponent implements OnInit {
 
   // get data from APi
   getData() {
-    this.connectionServ.getDataFromPulaskiegoPoint()
+    this.connectionServ.getDataFromPileckiegoPoint()
       .subscribe(
         (response) => {
           this.data = response.json();
@@ -41,4 +42,5 @@ export class PulaskiegoComponent implements OnInit {
   ngOnInit() {
     this.getData();
   }
+
 }
