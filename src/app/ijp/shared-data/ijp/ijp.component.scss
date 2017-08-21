@@ -1,0 +1,18 @@
+@import './../../../../scss/partials/_bcg';
+
+.station__data-ijp {
+    min-height: 100px;
+    padding: .250rem;
+    text-align: center;
+        h3 {
+            text-transform: uppercase;
+        }
+}
+.data__ijp {
+    margin: .250rem 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.text__ijp {
+    font-size: .900rem;
+}

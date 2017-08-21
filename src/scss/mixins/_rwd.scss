@@ -1,0 +1,15 @@
+@mixin for-lphones-landscape {
+    @media (min-width: 667px) and (orientation: landscape ) {
+        @content;
+    }
+}
+@mixin from-tablet-portrait {
+    @media (min-width: 768px) and (orientation: portrait) {
+        @content;
+    }
+}
+@mixin from-sm-desktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}

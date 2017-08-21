@@ -1,0 +1,21 @@
+/**
+ * +++ +++ EXTENDS for app +++ +++
+ */ 
+ @import '../variables/_variables';
+ @import '../mixins/_rwd';
+ 
+ %station-container {
+    width: 100%;
+    margin-top: .500rem;
+    padding: .250rem;
+    background-color: $light-gray-bcg;
+    @include for-lphones-landscape {
+        width: 49%;
+    }
+    @include from-tablet-portrait {
+        width: 49%;
+    }
+    @include from-sm-desktop {
+        width: 33%;
+    }
+ }

@@ -1,0 +1,45 @@
+html {
+    font-family: $main-font-family;
+    font-size: $main-font-size;
+    font-weight: $font-thin;
+    color: $text-white;
+}
+body {
+    padding: .250rem;
+    background-color: $gray-bcg;
+}
+.flex {
+    display: flex;
+}
+.flex__wrap {
+    flex-wrap: wrap;
+}
+.flex__column {
+    flex-direction: column;
+}
+.flex__row {
+    flex-direction: row;
+}
+.flex__justify-center {
+    justify-content: center;
+}
+.flex__justify-spacearound {
+    justify-content: space-around;
+}
+.btn {
+    margin: .500rem 0;
+    padding: .500rem;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+.btn__refresh {
+    border: 1px solid $text-orange;
+    color: $text-orange;
+        @include from-sm-desktop {
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: $text-orange;
+                color: $text-white;
+            }
+        }
+}

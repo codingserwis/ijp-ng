@@ -1,0 +1,8 @@
+@import '../../../scss/extends/_extends';
+
+:host {
+    @extend %station-container;
+}
+.station__data {
+    width: 33%;
+}
