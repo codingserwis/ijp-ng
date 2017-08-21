@@ -2,21 +2,21 @@ import { IjpConnectionService } from './../service/ijp-connection.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'chabry-data',
-  templateUrl: './chabry.component.html',
-  styleUrls: ['./chabry.component.scss'],
-  providers: [IjpConnectionService]
+  selector: 'pulaskiego-data',
+  templateUrl: './pulaskiego.component.html',
+  styleUrls: ['./pulaskiego.component.scss'],
+  providers: [ IjpConnectionService ]
 })
-export class ChabryComponent implements OnInit {
+export class PulaskiegoComponent implements OnInit {
   data: any;
-  stationName = 'Osiedle Chabry';
+  stationName = 'Pulaskiego';
   ijpData: string;
   ijpString: string;
   pm25Data: string;
   pm10Data: string;
-
+ 
   constructor(private connectionServ: IjpConnectionService) { }
-  
+
   // insert data to DOM;
   insertData() {
     this.ijpData = this.data.IJP;
@@ -27,7 +27,7 @@ export class ChabryComponent implements OnInit {
 
   // get data from APi
   getData() {
-    this.connectionServ.getDataFromChabryPoint()
+    this.connectionServ.getDataFromPulaskiegoPoint()
       .subscribe(
         (response) => {
           this.data = response.json();

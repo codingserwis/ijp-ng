@@ -23,4 +23,7 @@ export class IjpConnectionService {
     return this.http.get(`http://api.looko2.com/?method=GetLOOKO&id=${this.apiConfig.location.chabry}&token=${this.apiConfig.key}`);
   }
 
+  getDataFromPulaskiegoPoint() {
+    return this.http.get(`http://api.looko2.com/?method=GetLOOKO&id=${this.apiConfig.location.pulaskiego}&token=${this.apiConfig.key}`); 
+  }
 }
