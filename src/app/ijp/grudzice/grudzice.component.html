@@ -1,0 +1,16 @@
+<h2 class="station__container-header">{{ stationName }}</h2>
+<div class="station__container-data flex flex__row flex__justify-spacearound">
+  <div class="station__data">
+    <data-ijp *ngIf="lookoData.ijp" [ijpVal]=lookoData.ijp [ijpStringVal]=lookoData.ijpString></data-ijp>
+  </div>
+  <div class="station__data">
+    <data-pm25 *ngIf="lookoData.pm25" [pm25Val]="lookoData.pm25"></data-pm25>
+  </div>
+  <div class="station__data">
+    <data-pm10 *ngIf="lookoData.pm10" [pm10Val]="lookoData.pm10"></data-pm10>
+  </div>
+</div>
+<div class="flex flex__justify-center">
+    <button class="btn btn__refresh"
+      (click)="onDataRefresh()">odśwież dane</button>
+  </div>
