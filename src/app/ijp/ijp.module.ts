@@ -5,6 +5,7 @@ import { ChabryComponent } from './chabry/chabry.component';
 import { PulaskiegoComponent } from './pulaskiego/pulaskiego.component';
 import { PileckiegoComponent } from './pileckiego/pileckiego.component';
 import { SolidarnosciComponent } from './solidarnosci/solidarnosci.component';
+import { PasiekaComponent } from './pasieka/pasieka.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { SolidarnosciComponent } from './solidarnosci/solidarnosci.component';
     ChabryComponent,
     PulaskiegoComponent,
     PileckiegoComponent,
-    SolidarnosciComponent
+    SolidarnosciComponent,
+    PasiekaComponent
   ],
   exports: [
     ChabryComponent,
     PulaskiegoComponent,
     PileckiegoComponent,
-    SolidarnosciComponent
+    SolidarnosciComponent,
+    PasiekaComponent
   ]
 })
 export class IjpModule { }
