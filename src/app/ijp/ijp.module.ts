@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ChabryComponent } from './chabry/chabry.component';
 import { PulaskiegoComponent } from './pulaskiego/pulaskiego.component';
 import { PileckiegoComponent } from './pileckiego/pileckiego.component';
+import { SolidarnosciComponent } from './solidarnosci/solidarnosci.component';
 
 @NgModule({
   imports: [
@@ -13,12 +14,14 @@ import { PileckiegoComponent } from './pileckiego/pileckiego.component';
   declarations: [
     ChabryComponent,
     PulaskiegoComponent,
-    PileckiegoComponent
+    PileckiegoComponent,
+    SolidarnosciComponent
   ],
   exports: [
     ChabryComponent,
     PulaskiegoComponent,
-    PileckiegoComponent
+    PileckiegoComponent,
+    SolidarnosciComponent
   ]
 })
 export class IjpModule { }

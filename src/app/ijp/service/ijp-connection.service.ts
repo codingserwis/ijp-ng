@@ -30,4 +30,8 @@ export class IjpConnectionService {
   getDataFromPileckiegoPoint() {
     return this.http.get(`http://api.looko2.com/?method=GetLOOKO&id=${this.apiConfig.location.pileckiego}&token=${this.apiConfig.key}`); 
   }
+
+  getDataFromSolidarnosciPoint() {
+    return this.http.get(`http://api.looko2.com/?method=GetLOOKO&id=${this.apiConfig.location.osAlSolid}&token=${this.apiConfig.key}`); 
+  }
 }
